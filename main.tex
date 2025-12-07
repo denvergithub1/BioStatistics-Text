@@ -20,23 +20,78 @@
     
 
 \begin{center}
-    {\LARGE \textbf{Simplified Biostatistics}}\\[6pt]
+
+    {\LARGE \textbf{Simplified Biostatistics - A Handbook}}\\[16pt]
+    
    Denver JnBaptiste  
 \newpage
 
-\tableofcontents
+\textbf{For Juden JnBaptiste}
+
+\newpage
+
+\section*{\underline{Table of Contents:}}
+
+\qquad
+
+% List of Topics
+\section*{Frequency Distribution}
+\section*{Class Mark}
+\section*{Frequencies}
+\section*{Mean}
+\section*{Median}
+\section*{Mode}
+\section*{Sum of Squares}
+\section*{Variance}
+\section*{Sample variance (subset of population)}
+\section*{Population variance}
+\section*{{Standard deviation}
+\section*{Binomial Distribution}
+\section*{Normal Distribution}}
+\section*{Confidence Intervals}
+\section*{Confidence Limits}
+\section*{Test Statistics}
+\section*{Analysis of Variance (Anova)}
+\section*{One way Anova}
+\section*{Two way Anova}
+\section*{Multiple Comparison test as part of Anova}
+\section*{Student - Newman - Keul (SNK) Comparison}
+\section*{Independent T-test}
+\section*{Two-way Anova with replication}
+\section*{Two way Anova without replication}
+\section*{Paired t-test (Two way Anova)}
+\section*{Homogeneity of Group Variances}
+\section*{Wilcoxon}
+\section*{Kruskal-Wallis H-test continuous data}
+\section*{Regression Analysis}
+\section*{Correlation Analysis}
+\newpage
+
+\section*{Chi-Square Goodness of Fit (Mendelian Genetics)}
+\section*{Independence / Contingency table}
+\section*{Relative Risk}
+\section*{Principal Component Analysis}
 
 \newpage
 
 \end{center}
 
+Data needs to be organized in a way that is descriptive. Statistics allows that. In this review, we will use various common techniques in statistics that will allow for simple analysis, examining discrete or continuous data. 
+
+\newpage
+
 \centering \section*{Frequency Distribution}
 
-Frequency distribution helps to quickly see how often each value or group of values appears in your data. It organizes numbers into simple classes so you can easily spot patterns, trends, and make comparisons. This, like all the examples in this book represents a small data set but we use the same logic for a larger dataset. 
+Frequency distribution helps analyze how often each value or group of values appears in your data. It organizes numbers into simple classes so you can easily spot patterns, trends, and make comparisons.
 
 \qquad
 
-\centering \textbf{Table 1: Frequency Distribution Table Showing Class Limits and Class Boundaries}
+Imagine the dataset below represents the heights of a specific type of plant. 
+"Class Limits" of this plants height ranges from 30-99 centimeters (cm). 
+
+\qquad
+
+\centering \textbf{Table 1: Frequency Distribution Table Showing Class Limits and Class Boundaries- Plant Height Data}
 
 \begin{table}[H]
 \centering
@@ -54,6 +109,7 @@ Frequency distribution helps to quickly see how often each value or group of val
 \bottomrule
 \end{tabular}
 \end{table}
+Each group of the plant examined in the table above, falls within a specific range. The table represents these ranges. 
 
 \noindent
 \begin{minipage}[t]{0.48\textwidth}
@@ -106,19 +162,19 @@ LCB_2 &= 49 + \frac{1}{2}(1) \\
 \end{align*}
 \end{minipage}
 
-Class boundaries basically help make sure your data flows smoothly from one class to the next without leaving any gaps. They sit right between the upper limit of one class and the lower limit of the next. This makes the distribution continuous, so every data point has a clear spot to go—no overlaps, no confusion. It keeps histograms accurate and makes statistical work cleaner.
+Class boundaries help ensure that your data flows smoothly from one class to the next without leaving any gaps. They sit right between the upper limit of one class and the lower limit of the next. This makes the distribution continuous, so every data point has a clear spot to go, no overlaps, no confusion. It keeps histograms accurate and makes statistical work cleaner.
 
-In the examples above, the unit of measurement is 1 (39-40, 49-50... etc. ) and so, we multiply this unit of measurement by 1/2 for the LCB and UCB respectively. You can substitute any unit of measurement based on your class limits to be multiples by 1/2 for class boundaries. For example if the class limits were 35-40 and 45-50, then the unit of measurement would be 5. 
+In the examples above, the unit of measurement for these plants is 1 (39-40, 49-50... etc. ) and so, we multiply this unit of measurement by 1/2 for the LCB and UCB respectively. You can substitute any unit of measurement based on your class limits to be multiplied by 1/2 for class boundaries. For example if the class limits were 35-40 and 45-50, then the unit of measurement would be 5. 
 
 \qquad
 
-We will continue with the same data set above to analyze the class mark. 
+We will continue with the same data set used for plant frequencies, lower and upper class boundaries, to analyze the class mark. 
 
 \newpage 
 
 \section*{Class Mark}
 
-Class mark is important because it gives the center value of a class. It helps represent the whole class with one number, which makes calculations like mean and graphs easier and quicker.
+Class mark is important because it gives the center value of a class. It helps represent the whole class with one number, which makes calculations like mean and graphing easier and quicker.
 
 \[
 \text{Class Mark} = \frac{\text{Lower Class Limit} + \text{Upper Class Limit}}{2}
@@ -146,24 +202,40 @@ Class mark is important because it gives the center value of a class. It helps r
 \text{CM}_1 = \frac{30+39}{2}
 = 34.5
 
+\qquad
+
 \\
 \text{CM}_2 = \frac{40+49}{2}
-= 44.5
-etc.
+= 44.5 
 
-Take a look at the histogram below which represents this data: 
+\qquad
+
+A histogram is a bar graph (representing discrete data) that has continuous data.
+
+\qquad
+
+Take a look at the histogram below, which represents our table so far: 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{Screen Shot 2025-11-18 at 10.30.01 PM.png}
-    \caption{Histogram representing the \textbf{class boundaries} and class \textbf{mark} for data above.}
+    \caption{Histogram representing the \textbf{class boundaries-continuous data points} and class \textbf{mark} for data above.}
     \label{fig:placeholder}
 \end{figure}
 
+\qquad
+
+The height of each of each bar in our histogram is proportional to frequencies. The widths here represent class boundaries. The data above represent continuous data points. If the bars for the (frequency) histogram are removed, you are left with specific points (class marks) that represents a frequency polygon. It's the same plant data, just represented differently. 
+
 \newpage
+
 \section*{Frequencies}
 
 \textbf{Table 3: Frequency Distribution Table}
+
+\qquad
+
+Plant Height Data. 
 
 \begin{table}[H]
 \centering
@@ -187,11 +259,15 @@ Take a look at the histogram below which represents this data:
 
 \qquad
 
-Relative frequency shows how often something happens in proportion to the total. It’s a percentage or decimal of the total.
+Relative frequency shows how often something happens in proportion to the total. It’s a percentage or decimal of the total. So, plant height #1 is 2 cm with respect to the total height of the plant which is 60cm. The same follows for the other heights in our table above. 
 
 \qquad
 
 Cumulative Frequency keeps adding up the frequencies as you move down the table. It shows how many values fall up to that point.
+
+\qquad
+
+This analysis is good for comparison of various samples. In our case here, it's the height of plants. 
 
 \qquad
 
@@ -200,7 +276,7 @@ Relative Cumulative Frequency is the same as cumulative, but in percentage form.
 \newpage
 
 \begin{table}[h!]
-    \centering \textbf{Table 4: Frequency Distribution}
+    \centering \textbf{Table 4: Frequency Distribution- Table for Central Tendency}
 
 \qquad
     
@@ -227,16 +303,22 @@ The table above demonstrates the values needed to calculate the measures of cent
 
 \section*{Mean}
 
-Mean tells you the typical or central value of your data. To find the mean, simply add up all the numbers and divide by the total of the numbers. 
+Mean tells you the typical or central value of your data. To find the mean, simply add up all the numbers and divide by the total of the numbers (this is the simple arithmatic mean). 
 
 \qquad
 
-We are going to calculate the frequency sample mean of the data presented in our tables so far. 
+We are going to calculate the frequency sample mean (weighted mean for grouped data) of the data presented in our tables so far. 
 
 \qquad
 
+For group data, each value is multiplied by its respective frequency, the products are added up and divided by the total frequency. 
 
-\text{Population mean} \Rightarrow M = \frac{\sum x_i}{\sum f}
+\qquad
+
+So: 
+
+
+\text{Population mean} \Rightarrow \mu = \frac{\sum x_i}{\sum f}
 
 \qquad
 
@@ -262,7 +344,7 @@ $\bar{x} = \frac{3880}{60} = 64.67$.
 
 \section*{Median}
 
-Median is the middle value when the numbers are arrangeed from smallest to largest. This is especially useful to show the center of data when there are outliers. 
+Median is the middle value when the numbers are arranged from smallest to largest. This is especially useful to show the center of data when there are outliers. 
 
 \qquad
 
@@ -272,7 +354,7 @@ $$\frac{n+1}{2}$$
 If frequency total is \textbf{even} use:
 $$\frac{\frac{n}{2}+(\frac{n}{2}+1)}{2}$$
 
-After you get the solution to the calculations (odd or even data values), simply look in the \textbf{cumulative frequency} section, for the median cumulative frequency and that would be your solution.
+After you get the solution to the calculations (\textbf{odd} or \textbf{even} data values), simply look in the \textbf{cumulative frequency} section, for the median cumulative frequency and frequency total from our plant data table and that would be your solution.
 
 \qquad
 
@@ -283,7 +365,7 @@ where \\
 
 \raggedright 
 
-* L = lower class boundary of median group frequency based on cumulative frequency. \\
+* L = lower class limit of median group frequency based on cumulative frequency. \\
 
 \qquad
 
@@ -319,7 +401,7 @@ $\frac{60}{2} = 30$.
 
 \qquad
 
-So based on the cum freq.
+So based on the cumulative frequency, our lower class limit is 49.5. 
 
 \qquad
 
@@ -347,7 +429,7 @@ $= 59.5$.
 
 \qquad
 
-So median group is $60-69$.
+So median group is $60-69$, based on class boundaries (table 1). 
 
 \qquad
 
@@ -403,7 +485,11 @@ $\therefore$ Mode $= 49.5 + \left(\frac{(16-12)}{(16-12)+(12-2)}\right) \times 1
 
 \qquad
 
-&= 52.357
+&= 52.357 is our mode
+
+\qquad
+
+There may be plants that appear to have the same heights based on condition/ conditions that are similar. 
 
 \qquad
 
@@ -416,11 +502,14 @@ $\therefore$ Mode $= 49.5 + \left(\frac{(16-12)}{(16-12)+(12-2)}\right) \times 1
 
 \qquad
 
-Sum of squares is the total of all squared differences from the mean. This can show how spread out the data is. \textbf{So, the bigger the sum of squares, the more spread out your data }
+Let's use our plant height tables to examine the sum of squares. 
+
+\qquad
+The Sum of Squares is the total of all squared differences from the mean. This can show how spread out the data is. \textbf{So, the bigger the sum of squares, the more spread out your data }
 
 \qquad
 
-The sum of squares is actually the base for some other statistical outlooks such as variance, standard deviation, ANOVA, regression principle component analysis and more. 
+The sum of squares is also the base for some other statistical outlooks such as variance, standard deviation, ANOVA, regression principle component analysis and more. Which we will discuss later. 
 
 \qquad
 
@@ -451,6 +540,8 @@ Total & 60 & & 269805 & 3880 \\
 \bottomrule
 \end{tabular}
 
+\qquad
+
 Table showing the set up for sum of squares calculations.
 
 \vspace{1cm}
@@ -469,6 +560,8 @@ $$= 269805 - 250906.67$$
 
 $$= 18898.33$$
 
+This is our sum of squares for plant height or the spread of our data. The sum of spuares for one sample set can be compared to another sample set. 
+
 \newpage
 
 \section*{Variance:}
@@ -479,9 +572,10 @@ Variance shows how spread out the data is from the average (how many data points
 
 \qquad
 
-So: If all values are close to the mean → low variance (data is consistent).
+So: If all values, for height for example, are close to the mean → low variance (data is consistent).
 
 If values are far from the mean → high variance (data is spread out).
+The same applies to sample and population variance. 
 
 \subsection*{Sample variance (subset of population):}
 
@@ -509,10 +603,19 @@ Population variance = $\sigma^{2}=\frac{\sum(x_{i}-\mu)^{2}}{n}
 
 \qquad
 
-$=(34.5-64.67)^{2}+(44.5-64.67)^{2}+(54.5-64.67)^{2}+$
-$(64.5-64.67)^{2}+(74.5-64.67)^{2}+(84.5-64.67)^{2}$
-$+(94.5-64.67)^{2}$
-60
+
+
+&= \frac{
+(34.5-64.67)^{2} + (44.5-64.67)^{2} + (54.5-64.67)^{2} +{}\\
+&\qquad
+(64.5-64.67)^{2} + (74.5-64.67)^{2} + {}\\
+&\qquad
+(84.5-64.67)^{2} + (94.5-64.67)^{2}}{60}
+
+\qquad
+
+The denominator is 60 and our solution is 46.68. That is our population variance. 
+
 
 \newpage
 
@@ -533,11 +636,17 @@ If the standard deviation is large → the data points are far from the mean (mo
 
 \\[2\baselineskip]
 
+Let's use out plant height data set to find the standard deviation. 
+
 The formula for standard deviation is below: 
 
 \qquad
 
 $S = \sqrt{S^2} \Rightarrow \text{Sample standard deviation}$
+
+\qquad
+
+so, the square root of variance is the standard deviation. 
 
 \qquad
 
@@ -547,13 +656,26 @@ Below is how we calculate standard deviation:
 
 $\sigma = \sqrt{\sigma^2} \Rightarrow \text{Population standard deviation}$
 
+\qquad
+
 $\therefore \text{Since } S^2 = 320.31$
+
+\qquad
 
 $S = \sqrt{320.31}$
 
-$= 17.9$
+\qquad
 
-Coefficient of variation $\Rightarrow V$
+$= 17.9$
+is our standard deviation (SD).
+
+\qquad
+
+If we want to calculate the Coefficient of variation $\Rightarrow V$
+
+\qquad
+
+This is the analysis of relative dispersion of the data. The SD is divided by the mean. 
 
 \qquad
 
@@ -577,7 +699,8 @@ $= 27.7 \%$
 
 \qquad
 
-Binomial distribution is used when you’re counting how many times something succeeds out of a fixed number of trials, where:
+If you want to use binomial distribution to analyze data, (counting how many times something succeeds out of a fixed number of trials), you need the following features:
+
 
 \qquad
 
@@ -593,7 +716,13 @@ Binomial distribution is used when you’re counting how many times something su
 
 * The probability of success (p) stays the same each time.
 
+\qquad
+
 * All trials are independent, one outcome doesn't affect the next.
+
+\qquad
+
+Recall from probability and statistics: (1-q) = p where p is the success rate and q is the rate of failure. 
 
 \vspace{1cm}
 
@@ -619,7 +748,7 @@ Total & 60 \\
 
 \vspace{1cm}
 
-If we are dealing with success or failure: 
+If we are dealing with success or failure, from our plant height dataset:  
 
 \qquad
 
@@ -639,11 +768,11 @@ Therefore, the probability of all 6 scoring below 60 is $P^6 = (0.5)^6 = 0.016$.
 
 \qquad
 
-c) The probability of the first 4 Scarfing 60 or more.
+c) The probability of the first 4 scoring 60 or more.
 
 $$\binom{6}{4} (p^4 q^2) = \binom{6}{4} (0.5)^4 (0.5)^2$$
 $$= 15(0.0156)$$
-$$= 0.234$$
+$$= 0.234$$ is the probability of the first 4 scoring 60 or more. 
 
 Other useful formulas for Binomial Distribution:
 
@@ -652,12 +781,14 @@ Other useful formulas for Binomial Distribution:
 mean $\Rightarrow \bar{x} = np$
 variance $\Rightarrow s^2 = npq$
 Standard deviation $\Rightarrow s = \sqrt{npq}$
+ where n represents the total number of trials. 
+
 
 \newpage
 
 \section*{Poisson Distribution}
 
-Poisson Poisson distribution shows many times an event is likely to happen in a fixed time or space, when:
+Poisson Poisson distribution shows how many times an event is likely to happen in a fixed time or space, when:
 
 \qquad
 
@@ -671,9 +802,13 @@ Poisson Poisson distribution shows many times an event is likely to happen in a 
 
 \qquad
 
-* It happens at an average known rate lambda (λ).
+* It happens at an average known rate lambda (\lambda.
 
-$$P(x)=\frac{\mu^{x}}{e^{u}x!}$$
+\qquad
+
+The formula for Poisson distribution is: 
+
+$$P(x)=\frac{\mu^{x}}{e^{\mu}x!}$$
 
 \centering
 
@@ -703,7 +838,7 @@ eg. If there are 90 cars and $2\%$ normally have defective bolts. What is the pr
 
 \qquad
 
-Sol: $n=90$
+So: $n=90$
 
 \qquad
 
@@ -711,16 +846,16 @@ $2\%=0.02$.
 
 \qquad
 
-So: $m=(90)(0.02)$
+So: $\mu=(90)(0.02)$
 $= 1.8$
 
 \qquad
 
-So: $P(x) = \frac{u^x}{e^u x!} = \frac{1.8^6}{e^{1.8}(6!)} = \frac{1.8^6}{4.355.7} = 0.0078...$
+So: $P(x) = \frac{\mu^x}{e^\mu x!} = \frac{1.8^6}{e^{1.8}(6!)} = \frac{1.8^6}{4.355.7} = 0.0078...$
 
 \qquad
 
-P(X<2) \text{ are defective: } = P(X=1)+P(X=0)
+P(X$<2) \text{ are defective: } = P(X=1)+P(X=0)
 $$
 =\frac{1.8^{1}}{e^{1.8}(1!)}+\frac{1.8^{0}}{e^{1.8}(0!)}
 $$
@@ -729,15 +864,29 @@ $$
 $$
 $$
 = 0.463
+\qquad
+
 $$
 $P(X\ge 2)=1-\{P(X<2)\}$
 $$
 = 1-0.463
 $$
 $$
+\qquad
+
+so, the probability that 6 bolts are defective is: 
 = 0.537
+
 $$
-Coefficient of dispersion is found when Poisson is concerned, it checks for randomness for Poisson because u a variance = 1.
+
+\qquad
+
+Coefficient of dispersion  (CD) is found when Poisson is concerned, it checks for randomness for Poisson because \mu 
+
+and variance = 1.
+
+\qquad
+
 $$
 CD=\frac{s^{2}}{\overline{x}}.
 $$
@@ -747,6 +896,10 @@ $$
 \section*{Normal Distribution}
 
 Normal distribution is \textbf{symmetric around the mean,} where most values cluster near the mean and fewer values occur as you move farther away.
+
+\qquad
+
+For normal distribution:
 
 \begin{itemize}
     \item mean = median = mode
@@ -764,19 +917,25 @@ Normal distribution is \textbf{symmetric around the mean,} where most values clu
 
 $$Z = \frac{x_i - \mu}{\sigma}$$
 
-If $\mu = 64.67$ mm and we are asked what proportion of the population is greater than 67 mm.
+\qquad
+
+Let's use some arbiturary values here:
+
+\qquad
+
+If $\mu = 64.67$ mm and we are asked what proportion of the population is greater than 67 mm, on our bell curve, since the standard score or deviate \rightarrow z score. 
 
 $$Z = \frac{67 - 64.67}{17.9}$$
 
 $$= 0.130$$
 
-So: $P(x_i > 67\text{mm}) = P(Z > 0.13) = 0.5517$. from the normal distribution table.
+So: $P(x_i > 67\text{mm}) = P(Z > 0.13) = 0.5517$. from the \textbf{normal distribution table}.
 
-two tailed = 0.5517. \\
+for two tailed = 0.5517. \\
 
 \qquad
 
-one tailed = 0.4483 \\
+for one tailed = 0.4483 \\
 
 \qquad
 
@@ -784,7 +943,9 @@ So: $1 - 0.4483$ \\
 
 \qquad
 
-$= 0.5517$ \\
+$= 0.5517$  \\
+is the proportion of the population greater than 67
+
 
 \begin{figure}[h!]
     \centering
@@ -799,13 +960,17 @@ $= 0.5517$ \\
 \qquad
 
 Confidence intervals are range values, calculated from sample data. 
-CI's show how sure we about an estimate made. CI's are normally represented as percentages (95% CI). 
+CI's show how sure we are, about an estimate made. CI's are normally represented as percentages (95 \%). 
+
+\qquad
+
+Formulas for CI's: 
 
 \qquad
 
 \raggedright
 
-1) $P\left(-t_{\alpha/2, v} \le \frac{\bar{x} - \mu}{s_{\bar{x}}} \le t_{\alpha/2, v}\right) \quad 1-\alpha$
+1) $P\left(-t_{\alpha v} \le \frac{\bar{x} - \mu}{s_{\bar{x}}} \le t_{\alpha v}\right) \quad 1-\alpha$
 
 \qquad
 
@@ -814,6 +979,26 @@ CI's show how sure we about an estimate made. CI's are normally represented as p
 \qquad
 
 3) $\frac{vs^2}{\chi^2_{\alpha/2, v}} \le \sigma^2 \le \frac{vs^2}{\chi^2_{1-\alpha/2, v}}$
+
+\qquad
+
+where \alpha; 
+
+\hspace{represents the significance level:} 
+
+\qquad
+
+95 \% \Rightarrow 
+\alpha = 0.05, 
+
+\qquad
+
+90\% 
+\Rightarrow 0.1, 
+
+\qquad
+
+99\% \Rightarrow 0.01
 
 \newpage
 
@@ -843,7 +1028,7 @@ Test statistics are numbers calculated from sample data that are used to decide 
 
 \qquad
 
-Test statistics should not be confused with statistics tests as we have been doing. Test statistics summarize the difference between what you observe in your data and what you would expect under the null hypothesis, often in terms of standard errors.
+Test statistics should not be confused with the statistics tests which we have been doing. Test statistics summarize the difference between what you observe in your data and what you would expect under the null hypothesis, often in terms of standard errors.
 
 \qquad
 
@@ -859,7 +1044,11 @@ Examples of test statistics include t, z, chi-square, and F values.
 
 \qquad
 
-The null is accepted if there is no significant difference between the observed and the expected. If the null is rejected, the alternative is true and there is significant difference between the observed and the expected. 
+Where probability distribution is skewed to the right, higher values are less likely. 
+
+\qquad
+
+For any test statistic, the null is accepted if there is no significant difference between the observed and the expected. If the null is rejected, the alternative is true and there is significant difference between the observed and the expected. 
 
 \newpage
 
@@ -867,7 +1056,7 @@ The null is accepted if there is no significant difference between the observed 
 
 \qquad
 
-Anova compares the means of three or more groups to see if at least one group mean is significantly different from the other group means.
+Anova is a statistical test, which compares the means of three or more groups to see if at least one group mean is significantly different from the other group means.
 
 It works by analyzing the variance within groups versus the variance between groups.
 
@@ -880,7 +1069,7 @@ It works by analyzing the variance within groups versus the variance between gro
 
 \qquad
 
-$\implies$ 1 null hypothesis is needed for one way Anova
+$\implies$ only 1 null hypothesis is needed for one way Anova
 
 \subsection*{Two way Anova:}
 \begin{enumerate}
@@ -892,11 +1081,15 @@ One Way Anova determines whether there is any statistical significance between m
 
 So $H_{0} = \mu_{1} = \mu_{2} = \mu_{3} \dots \mu_{k}$
 
+\qquad
+
+Let's look at an example of one way Anova using our "Mice table" below (Mice grown in condition "X", "Y", "Z" ).
+
 \begin{table}[h]
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        Cars & X & Y & Z \\
+        Mice & X & Y & Z \\
         \hline
         & 8 & 6 & 8 \\
         & 9 & 2 & 9 \\
@@ -906,7 +1099,10 @@ So $H_{0} = \mu_{1} = \mu_{2} = \mu_{3} \dots \mu_{k}$
         Total & 25 & 15 & 29 \\
         \hline
     \end{tabular}
-\end{table}
+\end{table} \\
+\caption{Table showing Mice Grown in Condition "X", "Y", "Z" }
+
+\qquad
 
 $\text{mean} = x 6.25 \quad y3.75 \quad z7.25$
 
@@ -921,15 +1117,15 @@ $\text{Grand total} = 69$
         \hline
         Source of variance & SS & df & MS & $\text{F}_{S}$ & $\text{F}_{\text{table}}$ \\
         \hline
-        Among cars & 26 & 2 & 13 & 2.91 & $\text{F}_{0.05}(2,9)$ \\
-        within cars & 40.25 & 9 & 4.47 & & $= 4.26$ \\
+        Among Mice & 26 & 2 & 13 & 2.91 & $\text{F}_{0.05}(2,9)$ \\
+        within Mice & 40.25 & 9 & 4.47 & & $= 4.26$ \\
         \hline
-        Total cars. & 66.25 & 11 & & & \\
+        Total Mice & 66.25 & 11 & & & \\
         \hline
     \end{tabular}
 \end{table}
 
-from the "F" table for test statistics: If $\text{F}_{S} > \text{F}_{\text{table}}$ reject.
+from the "F" table for test statistics: If $\text{F}_{S} > \text{F}_{\text{table}}$ value, then reject the null, there is no significant difference.
 
 \qquad
 
@@ -959,6 +1155,8 @@ from the "F" table for test statistics: If $\text{F}_{S} > \text{F}_{\text{table
 &= 66.25 - 26 \\
 &= 40.25
 \end{align*}
+
+Where SS = Sum of Squares
 
 \newpage
 
@@ -1017,6 +1215,10 @@ LSD has a higher chance of \textbf{Type I error} (reject the null hypothesis eve
 \qquad
 
 BACK TO LSD:
+
+\qquad
+
+From our "Mice" data table: 
 
 $$ \text{LSD} = t_{\alpha(\text{df})} \sqrt{MS_w \left(\frac{1}{n_1} + \frac{1}{n_2}\right)} $$
 
@@ -1083,6 +1285,8 @@ Helps find which group means differ after ANOVA
 
 \qquad
 
+\textbf{\caption{From the Mice data table, we have the table below where SE is standard Error, q is the calculated q-value and Q is the critical q value. So, the null is accepted when the calculated q value is less than the critical q value}:
+}
 \begin{tabular}{l|l|l|l|l|l|l}
 \toprule
 Comparison & Difference & SE & P-range & $q = \frac{\text{Diff}}{\text{SE}}$ & $Q(2, 9)$ (from table) & Decision \\
@@ -1102,6 +1306,10 @@ x vs y & $6.25 - 3.75$ & $\frac{\sqrt{ms_w}}{\sqrt{n}}$ & 2 & $\frac{2.5}{1.06}$
 The data for independent T-tests is assumed to be normally distributed and has similar variances
 
 The Independent T-test is also called two-sample t-test. It is used to  compare the means of two independent groups to see if they are significantly different.
+
+\qquad
+
+\caption{Let's look at the table below with students in a class:}
 
 \qquad
 
@@ -1168,6 +1376,10 @@ $t_{0.05(10)} = 2.228$
 
 So $t_{s} < t_{\text{table}} \Rightarrow \text{accept } H_{0}$.
 
+\qquad
+
+There is no significant difference between the two groups.
+
 \newpage
 
 \section*{Two-way Anova with replication}
@@ -1183,9 +1395,9 @@ Two way Anova examines the effect of two independent factors on a dependent vari
 
 \qquad
 
+\textbf{\caption{Mean Squares (MS) for Different ANOVA Models}}
 \begin{table}[h]
     \centering
-    \caption{Mean Squares (MS) for Different ANOVA Models}
     \label{tab:anova_ms}
     \begin{tabular}{lccc}
         \toprule
@@ -1204,22 +1416,27 @@ Examples from the tables below:
 
 Lions by Country Data
 
-\begin{table}[h]
-    \centering
-    \begin{tabular}{lcccc}
-        \toprule
-        Country & I & II & III & Total \\
-        \midrule
-        African & 2 & 4 & 5 & \\
-        Subtotal & $\frac{8}{10}$ & $\frac{2}{6}$ & $\frac{3}{8}$ & 24 \\
-        Other & 6 & 7 & 8 & \\
-        Subtotal & $\frac{5}{11}$ & $\frac{2}{9}$ & $\frac{4}{12}$ & 32 \\
-        \midrule
-        Column total & 21 & 15 & 20 & Grand total = 56 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Country} & \multicolumn{3}{|c|}{\textbf{Lions}} & \textbf{Total} \\
+\cline{2-4}
+ & \textbf{I} & \textbf{II} & \textbf{III} & \\
+\hline
+African & 2 & 4 & 5 & \\
+African & 8 & 2 & 3 & \\
+Subtotal & 10 & 6 & 8 $ $ & 24\\
+\hline
+Other & 6 & 7 & 8 & \\
+Other & 5 & 2 & 4 & \\
+Subtotal & 11 & 9 & 12 $ $ & 32 \\
+\hline
+Column total & 21 & 15 & 20 & \textbf{Grand total = 56} \\
+\hline
+\end{tabular}
 
+\newpage
+
+\caption{F values for \alpha= 0.05}
 
 \begin{table}[h]
     \centering
@@ -1238,11 +1455,30 @@ Lions by Country Data
 \end{table}
 \label{Table showing }
 
-\text{accept } H_{0}$
+\text{accept } H_{0}  since F statistics is less than  F critical.
+
+\qquad
+
+\qquad
+
+SS: sum of squares
+DF : Degree of Freedom (n-1)
+MS: means square 
+F: is F statistic from the table.
+The( \displaystyle{\displaylines{\frac{MS}{Error}}})
+
+\qquad
+
+ratio of variance between groups to variance within groups. A large F-statistic suggests significant difference between the groups. 
+
+ 
+F_{\text{crit}: 
+
+F-distribution based on the degree of freedom and significance level. 
 
 \newpage
 
-Total\ ss = \Sigma A^{2} - \frac{(\Sigma A)^{2}}{N}
+Total\ SS = \Sigma A^{2} - \frac{(\Sigma A)^{2}}{N}
 
 \qquad
 
@@ -1257,8 +1493,10 @@ Total\ ss = \Sigma A^{2} - \frac{(\Sigma A)^{2}}{N}
 \qquad
 
 = 804.67 - (5.17+5.34+1.16)
-= 793.
 
+\qquad
+
+= 793 is the value for sum of squares for Error
 \newpage
 
 \section*{Two way ANOVA cont...}
@@ -1275,12 +1513,12 @@ $$\frac{24^2 + 32^2 - 3136}{6}$$
 $$= 266.67 - 261.33$$
 $$= 5.34$$
 
-\noindent Lions X country (intersection) ss:
+\noindent (Lions X country (intersection)) SS:
 $$\text{Individual cells} \Rightarrow \frac{10^2 + 6^2 + 8^2 + 11^2 + 9^2 + 12^2}{2} - \frac{3136}{12}$$
 $$= 273 - 261.33$$
 $$= 11.67$$
 
-\noindent Lion X country ss = Individual cells - (Among ss + Between ss)
+\noindent Lion X country SS = Individual cells - (Among SS + Between SS)
 $$= 11.67 - (5.17 + 5.34)$$
 $$= 1.16$$
 
@@ -1292,9 +1530,11 @@ $$= 1.16$$
 
 No interaction is tested with two way Anova without replication because there is only one observation.
 
+\qquad
+
+\textbf{\caption{Anova Table:}}
 \begin{table}[h!]
     \centering
-    \caption{ANOVA Table}
     \begin{tabular}{l c c c c c c}
         \toprule
         Source of Variation & S.S & Df & MS & F$_{S.0.05}$ & F$_{table}$ & Decision \\
@@ -1309,9 +1549,9 @@ No interaction is tested with two way Anova without replication because there is
 
 \vspace{1cm}
 
+\textbf{\caption{Types of Lions Per Region:}}
 \begin{table}[h!]
     \centering
-    \caption{Types of Lions per Region}
     \begin{tabular}{l c c c c c c}
         \toprule
         Types of Lions & L & M & N & O & Row Total \\
@@ -1327,7 +1567,7 @@ No interaction is tested with two way Anova without replication because there is
 
 \vspace{1cm}
 
-\noindent Calculations:
+\noindent Calculations for Types of Lions per Region:
 \begin{align*}
     \text{Among A} \implies \frac{13^2 + 18^2 + 15^2 + 11^2}{3} - \frac{(57)^2}{12} \\
     &= 279.67 - 270.75 \\
@@ -1341,7 +1581,7 @@ No interaction is tested with two way Anova without replication because there is
 
 \newpage
 
-\section*{Paired $t$-test (Two way Anova)}
+\section*{Paired $t$-test}
 
 \qquad
 
@@ -1369,15 +1609,26 @@ $$\therefore t_c = \frac{\bar{D}}{s_{\bar{D}}}$$
 
 $$\therefore \bar{D} = \frac{12}{5} = 2.4$$
 
-$$s^2 = \frac{\sum (D)^2 - (\sum D)^2/n}{n-1} = \frac{66 - (144)/5}{4} = 9.3$$
+s_{\bar{D}} = $$s^2 = \frac{\sum (D)^2 - (\sum D)^2/n}{n-1} = \frac{66 - (144)/5}{4} = 9.3$$
 
 $$\therefore s_{\bar{D}} = \sqrt{\frac{9.3}{n}} = \sqrt{\frac{9.3}{5}} = 1.36$$
+
+\qquad
+
+\noindent $s^2$ is the sample variance of a sum of different scores where $t$ is the test statistic, $\bar{D}$ is the mean of the difference between paired observations and $s_{\bar{D}}$ is the standard error of the mean difference.
+
 
 \newpage
 
 So. $t_{c}=\frac{\overline{D}}{S_{\overline{D}}}$
 $$=\frac{2.4}{1.36}=1.76.$$
-So $t_{0.05(4)} = 2.776$.
+So $t_{0.05(4)} = 2.776$
+
+\qquad
+
+where \alpha is 0.05 
+
+\qquad
 
 $t_{c} < t_{\text{table}}$ so accept...
 
@@ -1388,6 +1639,7 @@ $t_{c} < t_{\text{table}}$ so accept...
 \section*{Homogeneity of Group Variances}
 
 Measured using $F_{\text{max}}$.
+
 \qquad
 
 It ensures that there is a fair comparison between each group and the variances within each group are approximately equal.
@@ -1400,6 +1652,10 @@ Formula:
 \qquad
 
 $F_{\text{max}} = \frac{\text{Largest } S^2}{\text{Smallest } S^2}$
+
+\qquad
+
+where $s^2$ is the sample variance 
 
 \qquad
 
@@ -1427,7 +1683,11 @@ $S^2 \Rightarrow$ & 4.5 & 4.3 & 6.7 & 9.7 \\
 
 So: $F_{\text{max}_{\text{cal}}} = \frac{9.7}{4.3} = 2.26$.
 
+\qquad
+
 So: $F_{\text{max}_{\text{table}}} = 20.6$.
+
+\qquad
 
 $F_{\text{max}_{\text{cal}}} < F_{\text{max}_{\text{table}}} \Rightarrow \text{accept } H_0$.
 
@@ -1447,14 +1707,13 @@ $F_{\text{max}_{\text{cal}}} < F_{\text{max}_{\text{table}}} \Rightarrow \text{a
 \hline
 $\omega$ & $x$ & ordered($\omega$) & ordered ($x$) & Ranked ($\omega$) \\
 \hline
-8 & 10 & 5 & 8 & 0 \\
-5 & 10 & 6 & 9 & 1 \\
-3 & 9 & 8 & 10 & 1.5 \\
-8 & 8 & 8 & 10 & 1.5 \\
-6 & 5 & & & \\
+8 & 10 & 3 & 5 & 0 \\
+5 & 10 & 5 & 8 & 0.5 \\
+3 & 9  & 6 & 9 & 1 \\
+8 & 8  & 8 & 10 & 1.5 \\
+6 & 5  & 8 & 10 & 1.5\\
 \hline
-\multicolumn{4}{r|}{$\Sigma R = 4.5$} & \\
-\hline
+\multicolumn{5}{r}{$\Sigma R = 4.5$} & \\
 \end{tabular}
 \end{center}
 
@@ -1482,6 +1741,8 @@ Since $C$ or $C'$ is smaller than $U$ then accept.
 
 \section*{Wilcoxon:} - Another alternative to the independent t-test and is used for two dependent groups (paired). 
 
+\qquad
+
 \centering
 
 \begin{tabular}{c c c c} 
@@ -1497,6 +1758,13 @@ w & x & ordered (w) & ordered (x) \\
 \begin{tabular}{c c}
 
 \end{tabular}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Screen Shot 2025-11-20 at 8.17.17 PM.png}
+    \caption{ Wilcoxon ranking test for two independent groups from table above}
+    \label{fig:}
+\end{figure}
 
 \vspace{1cm}
 
@@ -1529,12 +1797,6 @@ $$C = n_1 n_2 - C_1$$
 \end{align*}
 \end{minipage}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{Screen Shot 2025-11-20 at 8.17.17 PM.png}
-    \caption{ Mann-Whitney ranking test for two independent groups from table above}
-    \label{fig:}
-\end{figure}
 
 \vspace{1cm}
 
@@ -1562,14 +1824,6 @@ Example below:
 
 \qquad
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{Screen Shot 2025-11-20 at 8.20.51 PM.png}
-    \caption{Wilcoxin ranking, to dependent groups(paired)}
-    \label{fig:placeholder}
-\end{figure}
-\vspace{0.5cm}
-
 $$H_{c}=\frac{12}{N(N+1)}\times\left(\frac{\Sigma R^{2}}{N_{i}}\right)-3(N+1)$$
 
 \vspace{0.5cm}
@@ -1582,6 +1836,15 @@ $$H_{c}=\frac{12}{N(N+1)}\times\left(\frac{\Sigma R^{2}}{N_{i}}\right)-3(N+1)$$
 5 & 3 & 7 \\
 3 & 4 & 5 \\
 \end{tabular}
+
+\qquad
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Screen Shot 2025-11-20 at 8.20.51 PM.png}
+    \caption{Ranking of samples in Kruskal-Wallis H-test}
+    \label{fig:placeholder}
+\end{figure}
 
 \qquad
 
@@ -1631,6 +1894,7 @@ Diabetes & Death & & & \\
 2 & 3 & 6 & 4 & 9 \\
 4 & 2 & 8 & 16 & 4 \\
 6 & 8 & 48 & 36 & 64 \\
+\hline
 12 & 18 & 62 & 56 & 102 \\
 \hline
 \end{tabular}
@@ -1675,12 +1939,15 @@ Total ss & 21 & $n-1=3$ & 7 & & \\
 \end{tabular}
 \end{center}
 
-Explained $SS = \frac{S\hat{\beta}^2}{SS_x}$
+Explained $SS = \frac{Sp^2}{SS_x}$
 
 \qquad
 
+$Sp^2$ is the squared sum of products.
 
-$\frac{S\hat{\beta}^2}{SS_x} = \frac{8^2}{20} = \frac{64}{20} = 3.2$.
+\qquad
+
+$\frac{Sp^2}{SS_x} = \frac{8^2}{20} = \frac{64}{20} = 3.2$.
 
 \qquad
 
@@ -1716,15 +1983,21 @@ $$4.5=0.4(3)+c$$
 $$4.5-1.2=c$$
 $$c=3.3$$
 $$\therefore y=0.4x+3.3$$
-So if predicted diabetes rate was 7.
+So, if predicted diabetes rate was 7.
 $$\therefore y=(0.4)(7)+3.3$$
 $$y=6.1 \implies \text{death}=6.1$$
+
+would die at that rate of diabetes. 
+
+\qquad
+
+
 
 \newpage
 
 \section*{Correlation Analysis}
 
-$+$ Both variables are random and the relationship between their strength and direction is determined with correlation analysis. 
+$+$ In Correlation Analysis,  both variables are random and the relationship between their strength and direction is determined as a result. 
 
 \vspace{1em}
 
@@ -1758,6 +2031,10 @@ $1-r^2 \Rightarrow$ coefficient of non-determination./unexplained variation
 
 $\sqrt{1-r^2} \Rightarrow$ coefficient of Alienation/disparity between two variables.
 
+\qquad
+
+To calculate coefficient of correlation: 
+
 \vspace{1em}
 
 $r = \frac{\text{sum of products}}{\sqrt{(SS_{Y_1})(SS_{Y_2})}} = \frac{\sum Y_1Y_2 - \frac{(\sum Y_1)(\sum Y_2)}{n}}{\sqrt{\left(\sum Y_1^2 - \frac{(\sum Y_1)^2}{n}\right)\left(\sum Y_2^2 - \frac{(\sum Y_2)^2}{n}\right)}}$
@@ -1776,7 +2053,10 @@ $1-r^2 = 0.23$
 
 $\sqrt{1-r^2} = \sqrt{0.23}$
 
+\qquad
+
 $= 0.48$
+is the coefficient of non determination. 
 
 \qquad
 
@@ -1808,6 +2088,10 @@ $t_{0.05}(n=4) = 2.776$
 
 $\Rightarrow t_{cal} < t_{table} \Rightarrow$ accept $H_0$.
 
+\qquad
+
+So, there is no significant difference between the two variables. 
+
 \newpage
 
 \section*{Chi-Square Goodness of Fit (Mendelian Genetics)}
@@ -1825,13 +2109,13 @@ Table showing punnet square for dihybrid genetic cross:
         \hline
         \textbf{} & \textbf{AA} & \textbf{Aa} & \textbf{aA} & \textbf{aa} \\
         \hline
-        \textbf{BB} & ABAB & ABab & aBAB & aBaB \\
+        \textbf{BB} & ABAB & ABaB & aBAB & aBaB \\
         \hline
         \textbf{Bb} & ABAb & ABab & ABab & aBab \\
         \hline
         \textbf{bB} & ABAb & ABab & ABab & aBab \\
         \hline
-        \textbf{bb} & ABAb & ABab & ABab & abab \\
+        \textbf{bb} & AbAb & Abab & Abab & abab \\
         \hline
     \end{tabular}
     \caption{Punnett square for a dihybrid cross (handwritten interpretation)}
@@ -1841,7 +2125,11 @@ Phenotypic ratio $\Rightarrow 9:3:3:1$
 
 \qquad
 
-Ratios $\frac{9}{16}:\frac{3}{16}:\frac{3}{16}:\frac{1}{16}$
+These are the expected values, so the ratios are as follow below:
+
+\qquad
+
+Ratios: $\frac{9}{16}:\frac{3}{16}:\frac{3}{16}:\frac{1}{16}$
 
 \qquad
 
@@ -1872,17 +2160,30 @@ If Observed is as below:
 
 \newpage
 
+\qquad
+
+To normalize our expected values based on the ratios for our punnet square: 
+
 % Calculations
 $$\frac{9}{16} \times \frac{59}{1} = 33.19$$
 $$\frac{3}{16} \times \frac{59}{1} = 11.06$$
 $$\frac{1}{16} \times \frac{59}{1} = 3.69$$
 
 % Chi-squared test
-$$\chi^2_{0.05(n-1)} \Rightarrow 7.815$$
+$$\chi^2_{0.05(n-1)} 
 % Assuming n-1 = 3 from context
 $$\chi^2_{0.05(3)} \Rightarrow 7.815$$
 
+\qquad
+
+Where n=4 for amount of samples and types. 
+
+
 $$\text{0.21} < 7.815 \Rightarrow \text{accept } H_0$$
+
+\qquad
+
+where a threshold of 0.05 is used. 
 $$\chi^2_{\text{cal}} < \chi^2_{\text{table}}$$
 
 \vspace{1cm} % Add some vertical space
@@ -1902,8 +2203,8 @@ The Independence table displays the frequency distribution for two categorical v
         \hline
         \textbf{Drug} & \textbf{worked} & \textbf{did not work} & \textbf{Total} \\
         \hline
-        Dong (A) & 30 & 15 & 45 \\
-        nodrug (B) & 18 & 23 & 41 \\
+        Drug (A) & 30 & 15 & 45 \\
+        no drug (B) & 18 & 23 & 41 \\
         \hline
         \textbf{Total} & 48 & 38 & 86 \\
         \hline
@@ -1951,9 +2252,6 @@ Total & & & & 4.5 & \\
 
 \vspace{1cm}
 
-$$\chi^2_{0.05(3)} = 7.815.$$
-
-$$\chi^2_{\text{table}} > \chi^2_{\text{cal}} \Rightarrow \text{accept.}$$
 
 \newpage
 
@@ -1961,11 +2259,13 @@ $$\chi^2_{\text{table}} > \chi^2_{\text{cal}} \Rightarrow \text{accept.}$$
 
 \qquad
 
-Would be used if we want to determine the probability of an event in an exposed group to the probability of the same event in a non-exposed group. 
+Relative Risk, Would be used if we want to determine the probability of an event in an exposed group to the probability of the same event in a non-exposed group. 
 
 \qquad
 
 To test correlation using relative risk:
+
+Let's use our drug table from the Independence/ Contingency. 
 
 $$RR=\left(\frac{a}{a+b}\right)\cdot\left(\frac{c+d}{c}\right)$$
 
@@ -1984,14 +2284,17 @@ $$=\frac{(30)(23)}{(15)(18)}$$
 $$=\frac{690}{270}$$
 
 $$= 2.55$$
+is the amount of times the risk of an outcome of the drug working (2.55-1) * 100
+
+= 155 \%
 
 \newpage
 
-\section*{What about principal component analysis (PCA)}
+\section*{What about principal component analysis (PCA)?}
 
 \qquad
 
-This method is converts many correlated variables (as seen in a variety linear regression graphs with scatter plots) to a smaller number of uncorrelated variables, that are called principle components. 
+This method converts many correlated variables (as seen in a variety linear regression graphs with scatter plots) to a smaller number of uncorrelated variables, that are called principle components. 
 
 \qquad
 \begin{figure}[h]
@@ -2041,11 +2344,11 @@ This method is converts many correlated variables (as seen in a variety linear r
         (35,39)
     };
 
-    \legend{Data points, PC1, PC2}
+    
 
     \end{axis}
     \end{tikzpicture}
-    \caption{PCA graph showing data points and the first two principal components (PC1 and PC2). The variables are hair and size- The PCA graph It shows, a visualization of how two data dimensions ("Hair" and "Size") can be represented in a new, transformed coordinate system that highlights the primary directions of variance- Blue= hair and size, red= longest axis and green= direction of maximum variance}
+    \caption{PCA graph showing data points and the first two principal components (PC1 and PC2). The variables are hair and size- The PCA graph shows, a visualization of how two data dimensions ("Hair" and "Size") can be represented in a new, transformed coordinate system that highlights the primary directions of variance- Blue= hair and size, red= longest axis and green= direction of maximum variance}
     
 \end{figure}
 
